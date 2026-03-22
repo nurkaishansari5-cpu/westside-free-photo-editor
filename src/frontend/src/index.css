@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 0.12 0.012 243;
+    --foreground: 0.92 0.01 243;
+    --card: 0.17 0.015 243;
+    --card-foreground: 0.92 0.01 243;
+    --popover: 0.21 0.018 243;
+    --popover-foreground: 0.92 0.01 243;
+    --primary: 0.57 0.2 255;
+    --primary-foreground: 0.98 0.005 243;
+    --secondary: 0.21 0.018 243;
+    --secondary-foreground: 0.92 0.01 243;
+    --muted: 0.21 0.018 243;
+    --muted-foreground: 0.68 0.018 243;
+    --accent: 0.26 0.022 243;
+    --accent-foreground: 0.92 0.01 243;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0.005 243;
+    --border: 0.26 0.022 243;
+    --input: 0.26 0.022 243;
+    --ring: 0.57 0.2 255;
+    --chart-1: 0.57 0.2 255;
+    --chart-2: 0.7 0.15 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.26 303;
+    --chart-5: 0.64 0.24 16;
+    --sidebar: 0.17 0.015 243;
+    --sidebar-foreground: 0.92 0.01 243;
+    --sidebar-primary: 0.57 0.2 255;
+    --sidebar-primary-foreground: 0.98 0.005 243;
+    --sidebar-accent: 0.21 0.018 243;
+    --sidebar-accent-foreground: 0.92 0.01 243;
+    --sidebar-border: 0.26 0.022 243;
+    --sidebar-ring: 0.57 0.2 255;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .editor-card {
+    background: oklch(0.17 0.015 243);
+    border: 1px solid oklch(0.26 0.022 243);
+    border-radius: 10px;
+  }
+
+  .slider-track {
+    background: oklch(0.33 0.025 243);
+  }
+
+  .crop-handle {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    position: absolute;
+  }
+
+  .grid-thirds {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.2) 1px,
+        transparent 1px
+      ), linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+    background-size: 33.333% 33.333%;
+  }
+}
